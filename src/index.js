@@ -4,15 +4,17 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from "react-redux";
+import Store from "./config/Store";
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <StrictMode>
+  <Provider store={Store}>
     <ColorModeScript />
     <App />
-  </StrictMode>
+  </Provider>
 );
 
 // If you want your app to work offline and load faster, you can change
